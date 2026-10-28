@@ -1,0 +1,17 @@
+@startuml Template
+
+abstract class Pagamento <<abstract>> {
+    + verificarAprovacao(): String
+    {abstract} + getMetodoPagamento(): String <<abstract>>
+}
+class PagamentoCredito extends Pagamento {
+    + getMetodoPagamento(): String
+}
+class PagamentoDebito extends Pagamento {
+    + getMetodoPagamento(): String
+}
+class PagamentoPix extends Pagamento {
+    + getMetodoPagamento(): String
+}
+
+@enduml
